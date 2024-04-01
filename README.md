@@ -1,1 +1,1 @@
-![dog](https://github.com/benjaminnigjeh/benjaminnigjeh.github.io/assets/108296284/491afaf9-221c-489a-b5c3-8f489ff7195b)
+![wordcloud (1)](https://github.com/benjaminnigjeh/benjaminnigjeh.github.io/assets/108296284/1d845808-1eee-4577-b986-2b8cb13df293)
