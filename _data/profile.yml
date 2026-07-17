@@ -16,6 +16,7 @@ scholar: ""
 orcid: ""
 
 cv_url: /cv.html
+cv_pdf_url: /assets/cv/Benjamin-Nigjeh-CV.pdf
 
 # --- Statistics Dashboard -------------------------------------------------
 # Values with a note are directly supported by the CV/repo. Values marked
