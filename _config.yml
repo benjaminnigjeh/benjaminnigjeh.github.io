@@ -17,3 +17,5 @@ plugins:
 # Keep kramdown/GFM defaults; index.html/portfolio.html/cv.html are plain
 # HTML with front matter (no Markdown conversion needed for those pages).
 markdown: kramdown
+
+# (build nudge 2026-07-17T10:15:29Z)
