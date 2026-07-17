@@ -1,0 +1,11 @@
+# Raw manuscript drops at repo root — clean copies live in assets/publications/.
+# Kept untracked so they are never picked up by a broad `git add`.
+Bioinformatics.pdf
+Proteomics.pdf
+Analytical Chemistry.pdf
+
+# Manuscript PDFs themselves are not committed by default: they carry publisher
+# "For Peer Review" / confidentiality watermarks and embedded personal emails.
+# Remove these two lines (and re-add the files) once you've explicitly approved
+# public distribution — see assets/publications/README.md.
+assets/publications/*.pdf

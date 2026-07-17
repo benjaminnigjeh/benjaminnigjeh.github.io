@@ -1,0 +1,161 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* ---------------------------------------------------------------
+   Custom additions for the "Selected Research" section.
+   Scoped to new class names only — no existing theme rules are
+   overridden, so the jekyll-theme-minimal base styling (layout,
+   fonts, header) is preserved everywhere else on the page.
+   --------------------------------------------------------------- */
+
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+  margin: 0.5rem 0 2rem;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  border-bottom-color: currentColor;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.research-card {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  padding: 1.25rem 1.35rem 1.5rem;
+  background: rgba(0, 0, 0, 0.015);
+  display: flex;
+  flex-direction: column;
+}
+
+.research-card h3 {
+  margin-top: 0.6rem;
+  margin-bottom: 0.35rem;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.status-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(0, 90, 156, 0.12);
+  color: #045; /* readable on both the light background above and dark-mode override below */
+  align-self: flex-start;
+}
+
+.research-context {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin: 0.15rem 0;
+}
+
+.research-source-title {
+  font-size: 0.8rem;
+  font-style: italic;
+  opacity: 0.65;
+  margin: 0 0 0.75rem;
+}
+
+.research-highlights {
+  margin: 0.5rem 0 0.75rem;
+  padding-left: 1.1rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.research-highlights li {
+  margin-bottom: 0.3rem;
+}
+
+.tech-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.tech-tags li {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.tech-details summary {
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.tech-details p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-top: 0.5rem;
+}
+
+.btn-manuscript {
+  display: inline-block;
+  margin-top: 0.9rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid currentColor;
+  text-decoration: none;
+  font-size: 0.85rem;
+  align-self: flex-start;
+}
+
+/* Respect reduced-motion preferences (no animation is used, but this
+   guards any future additions) */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark-mode support for the custom section only; the base theme's
+   own colors are left untouched outside these scoped classes. */
+@media (prefers-color-scheme: dark) {
+  .research-card {
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .status-badge {
+    background: rgba(120, 190, 255, 0.18);
+    color: #bfe3ff;
+  }
+
+  .tech-tags li {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+}
+
+@media (max-width: 480px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+}
