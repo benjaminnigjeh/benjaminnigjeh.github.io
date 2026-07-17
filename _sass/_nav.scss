@@ -12,13 +12,22 @@
 }
 
 .brand {
-  font-weight: 800;
-  font-size: 1.05rem;
-  color: var(--text-primary);
-  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  flex-shrink: 0;
 }
 
-.brand-dot { color: var(--accent); }
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  transition: transform 0.25s var(--ease-out);
+}
+
+.brand:hover .brand-mark,
+.brand:focus-visible .brand-mark {
+  transform: scale(1.08);
+}
 
 .primary-nav {
   display: flex;
