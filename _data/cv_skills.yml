@@ -1,0 +1,23 @@
+- group: Artificial Intelligence & Machine Learning
+  items: [Artificial Intelligence (AI), Machine Learning (ML), Deep Learning, Large Language Models (LLMs), Agentic AI Systems, Multi-Agent Systems, Foundation Models, Protein Language Models (PLMs), Contrastive Learning, Representation Learning, Embedding Models, Transformer Architectures, Graph-Based Learning, Probabilistic Machine Learning, Bayesian Inference, Feature Engineering, Model Training/Evaluation/Deployment, AI-Assisted Scientific Discovery, Explainable AI (XAI)]
+
+- group: Computational Proteomics & Bioinformatics
+  items: [Top-Down Proteomics, Bottom-Up Proteomics, Native Mass Spectrometry, Individual Ion Mass Spectrometry (I²MS), Charge Detection Mass Spectrometry (CDMS), Data-Independent Acquisition (DIA), Data-Dependent Acquisition (DDA), Proteoform Informatics, Protein Identification, Proteoform Characterization, Biomarker Discovery, Quantitative Proteomics, Multi-Omics Data Integration, Structural Proteomics, Chemoproteomics, Clinical Proteomics, Biological Database Integration]
+
+- group: Computational Algorithms
+  items: [Signal Processing, Isotope Deconvolution, Peak Detection, Feature Discovery, Pattern Recognition, Graph Algorithms, Statistical Modeling, Numerical Optimization, Probabilistic Scoring, Dimensionality Reduction, Clustering, Classification, Time-Series Analysis, Mathematical Modeling, Scientific Computing]
+
+- group: Software Engineering
+  items: [Python, MATLAB, Pascal, Delphi, R, C/C++, Java, JavaScript, HTML/CSS, Scientific Software Development, Object-Oriented Programming, REST APIs, FastAPI, Docker, Kubernetes, Git, GitHub Actions, Linux, NGINX, Software Architecture, Workflow Automation]
+
+- group: Cloud Computing & AI Infrastructure
+  items: [Cloud-Native Scientific Computing, Distributed Systems, High-Performance Computing (HPC), Data Engineering, MLOps, AI Pipeline Development, Containerized Workflows, CI/CD, Scalable AI Infrastructure, Model Deployment, Data Lakes, Knowledge Harvesting Pipelines]
+
+- group: Mass Spectrometry & Analytical Platforms
+  items: [Orbitrap, UHMR Orbitrap, TIMS-TOF, Triple Quadrupole, TOF, Ion Trap, LC–MS/MS, Method Development, Quantitative Bioanalysis, Pharmacokinetics (PK), Pharmacodynamics (PD), Therapeutic Protein Characterization, Post-Translational Modifications (PTMs)]
+
+- group: Bioinformatics & Proteomics Software
+  items: [Skyline, Proteome Discoverer, ProSight PD, TDPortal, TopPIC, TopFD, UniDec, MaxQuant, PEAKS Studio, Trans-Proteomic Pipeline (TPP), pyOpenMS, ms_deisotope, Thermo RawFileReader, FisherPy]
+
+- group: Data Science & Visualization
+  items: [Data Mining, Statistical Analysis, Data Visualization, Scientific Reporting, Dashboard Development, Plotly, Pandas, NumPy, Matplotlib]

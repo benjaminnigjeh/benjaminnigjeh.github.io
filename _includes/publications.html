@@ -1,0 +1,30 @@
+<section id="publications" data-reveal="fade">
+  <div class="section-head">
+    <p class="eyebrow">Selected Research</p>
+    <h2>Publications &amp; Research Manuscripts</h2>
+    <p>
+      Three research manuscripts tracing one line of work from general-purpose
+      unsupervised representation learning of proteomic data, to a supervised
+      classifier for a specific clinical question, to a self-supervised
+      pipeline that combines both into an automated labeling workflow. None
+      of these should be read as peer-reviewed or formally published unless
+      that status is explicitly confirmed — they are presented here as
+      research manuscripts / selected works.
+    </p>
+  </div>
+
+  <div class="filter-bar" data-filter-group=".pub-card" role="group" aria-label="Filter publications by topic">
+    <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+    <button type="button" class="filter-btn" data-filter="ai">AI</button>
+    <button type="button" class="filter-btn" data-filter="ml">Machine Learning</button>
+    <button type="button" class="filter-btn" data-filter="proteomics">Proteomics</button>
+    <button type="button" class="filter-btn" data-filter="mass-spectrometry">Mass Spectrometry</button>
+    <button type="button" class="filter-btn" data-filter="software">Software</button>
+  </div>
+
+  <div class="card-grid">
+    {%- for pub in site.data.publications %}
+      {% include publication-card.html pub=pub index=forloop.index0 %}
+    {%- endfor %}
+  </div>
+</section>

@@ -1,0 +1,40 @@
+# Radar-chart skill groups. "value" is a coarse 3-tier self-assessment
+# (90 = core/actively developed & led, 70 = working/applied, 50 = familiar/
+# listed) derived transparently from how each skill appears in the author's
+# CV — not a benchmarked score. See the caption on the Skills section.
+
+- category: Programming & Infrastructure
+  skills:
+    - { name: Python, value: 90 }
+    - { name: Docker, value: 90 }
+    - { name: Linux, value: 85 }
+    - { name: Cloud Computing, value: 85 }
+    - { name: "C / C++", value: 55 }
+    - { name: R, value: 55 }
+
+- category: AI & Machine Learning
+  skills:
+    - { name: Deep Learning, value: 90 }
+    - { name: LLMs & Agents, value: 85 }
+    - { name: Transformers, value: 80 }
+    - { name: Graph Learning, value: 80 }
+    - { name: Contrastive Learning, value: 80 }
+    - { name: TensorFlow, value: 75 }
+
+- category: Proteomics & Mass Spectrometry
+  skills:
+    - { name: Mass Spectrometry, value: 95 }
+    - { name: Top-Down MS, value: 90 }
+    - { name: Quantitation, value: 90 }
+    - { name: Biomarker Discovery, value: 90 }
+    - { name: DIA / DDA, value: 80 }
+    - { name: Proteoforms, value: 90 }
+
+- category: Data Science & Visualization
+  skills:
+    - { name: Data Visualization, value: 85 }
+    - { name: Plotly, value: 80 }
+    - { name: Pandas, value: 80 }
+    - { name: NumPy, value: 80 }
+    - { name: Matplotlib, value: 70 }
+    - { name: Dashboards, value: 70 }

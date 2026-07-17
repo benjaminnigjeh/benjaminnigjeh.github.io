@@ -1,0 +1,49 @@
+<section id="ai-concepts" data-reveal="fade">
+  <div class="section-head">
+    <p class="eyebrow">AI Foundations</p>
+    <h2>Concepts behind the work</h2>
+    <p>A quick primer on the AI/ML building blocks referenced throughout this site.</p>
+  </div>
+
+  <div class="card-grid">
+    <details class="concept-card glass" data-reveal="slide">
+      <summary>Large Language Models (LLMs)</summary>
+      <p>Transformer-based models trained on large text corpora to predict and generate language, increasingly used as reasoning and orchestration engines for scientific and agentic workflows rather than just chat interfaces.</p>
+    </details>
+
+    <details class="concept-card glass" data-reveal="slide">
+      <summary>Agentic AI</summary>
+      <p>Systems where an LLM (or a coordinated set of them) plans, calls tools, and takes multi-step actions toward a goal with limited human intervention — the pattern behind supervisor/expert-agent architectures like ProteoAgent.</p>
+    </details>
+
+    <details class="concept-card glass" data-reveal="slide">
+      <summary>Retrieval-Augmented Generation</summary>
+      <p>Grounds a model's output in retrieved documents or data rather than parametric memory alone — reduces hallucination and lets a system reason over up-to-date or domain-specific scientific knowledge.</p>
+    </details>
+
+    <details class="concept-card glass" data-reveal="slide">
+      <summary>Protein Foundation Models</summary>
+      <p>Large models pretrained on protein sequence/structure data (protein language models) that produce transferable embeddings useful for downstream tasks — identification, function prediction, and structure inference.</p>
+    </details>
+
+    <details class="concept-card glass" data-reveal="slide">
+      <summary>Contrastive Learning</summary>
+      <p>Trains a model to pull representations of similar examples together and push dissimilar ones apart, without requiring dense labels — well suited to matching spectra to candidate identifications.</p>
+    </details>
+
+    <details class="concept-card glass" data-reveal="slide">
+      <summary>Self-Supervised Learning</summary>
+      <p>Generates its own training signal from unlabeled data (e.g., via reconstruction or clustering), then uses the resulting representations or pseudo-labels to bootstrap downstream supervised models.</p>
+    </details>
+
+    <details class="concept-card glass" data-reveal="slide">
+      <summary>Transformers</summary>
+      <p>The attention-based architecture underlying modern LLMs and protein language models — models relationships between all elements of a sequence in parallel rather than step by step.</p>
+    </details>
+
+    <details class="concept-card glass" data-reveal="slide">
+      <summary>Graph Neural Networks</summary>
+      <p>Learn over graph-structured data by passing and aggregating information between connected nodes — a natural fit for evidence that spans consecutive MS1 scans, precursor ions, and MS/MS identifications.</p>
+    </details>
+  </div>
+</section>

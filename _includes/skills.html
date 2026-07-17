@@ -1,0 +1,20 @@
+<section id="skills" data-reveal="fade">
+  <div class="section-head">
+    <p class="eyebrow">Skills</p>
+    <h2>Capabilities by area</h2>
+    <p>
+      Relative emphasis based on how each skill appears in the author's own
+      experience record (actively developed/led vs. applied vs. familiar) —
+      a self-description, not a benchmarked or certified score.
+    </p>
+  </div>
+
+  <div class="radar-grid">
+    {%- for group in site.data.skills %}
+    <div class="radar-card glass" data-reveal="scale">
+      <h3>{{ group.category }}</h3>
+      <div data-radar='{{ group.skills | jsonify }}'></div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

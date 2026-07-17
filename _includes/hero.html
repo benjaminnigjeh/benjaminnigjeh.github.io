@@ -1,0 +1,49 @@
+<section class="hero" id="top">
+  <canvas id="hero-particles" class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <svg class="hero-protein" viewBox="0 0 300 420" fill="none" aria-hidden="true">
+    <path d="M60 20 C 20 80, 20 140, 60 180 S 140 260, 100 320 S 60 400, 120 400" stroke="url(#protein-grad)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M240 10 C 280 70, 260 130, 210 160 S 150 230, 190 290 S 250 360, 190 410" stroke="url(#protein-grad)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="60" cy="20" r="5" fill="var(--accent-3)"/>
+    <circle cx="100" cy="320" r="5" fill="var(--accent-2)"/>
+    <circle cx="120" cy="400" r="4" fill="var(--accent)"/>
+    <circle cx="210" cy="160" r="4" fill="var(--accent-3)"/>
+    <defs>
+      <linearGradient id="protein-grad" x1="0" y1="0" x2="300" y2="420">
+        <stop offset="0%" stop-color="var(--accent)"/>
+        <stop offset="100%" stop-color="var(--accent-2)"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="hero-content" data-reveal="slide">
+    <p class="eyebrow">AI &amp; Computational Proteomics</p>
+    <h1 class="hero-title">Benjamin Nouri Nigjeh</h1>
+    <p class="hero-subtitle">
+      AI Scientist • Computational Proteomics • Machine Learning • Bioinformatics • Software Engineering
+    </p>
+
+    <div class="hero-rotator" aria-live="off">
+      <span aria-hidden="true" style="--i:0">Proteoforms</span>
+      <span aria-hidden="true" style="--i:1">AI Agents</span>
+      <span aria-hidden="true" style="--i:2">Foundation Models</span>
+      <span aria-hidden="true" style="--i:3">Mass Spectrometry</span>
+      <span aria-hidden="true" style="--i:4">Graph Learning</span>
+      <span aria-hidden="true" style="--i:5">Deep Learning</span>
+      <span aria-hidden="true" style="--i:6">Cloud Computing</span>
+      <span aria-hidden="true" style="--i:7">LLMs</span>
+      <span aria-hidden="true" style="--i:8">Scientific AI</span>
+      <span class="visually-hidden">
+        Proteoforms, AI Agents, Foundation Models, Mass Spectrometry, Graph Learning, Deep Learning, Cloud Computing, LLMs, Scientific AI
+      </span>
+    </div>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="{{ '/#research-ecosystem' | relative_url }}">Explore the Research Ecosystem</a>
+      <a class="btn" href="{{ '/portfolio.html' | relative_url }}">AI Research Portfolio</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-cue" aria-hidden="true">Scroll</div>
+</section>

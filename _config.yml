@@ -1,3 +1,19 @@
-theme: jekyll-theme-minimal
-title: Benjamin Nigjeh's homepage
-description: Bookmark this to keep an eye on my project updates!
+title: Benjamin Nigjeh — AI Scientist & Computational Proteomics
+description: >-
+  AI scientist building agentic, AI-native computational platforms for
+  proteomics — machine learning, deep learning, protein language models,
+  and multi-agent systems applied to mass spectrometry proteoform analysis.
+author: Benjamin Nouri Nigjeh
+email: benjamin.nigjeh@gmail.com
+lang: en_US
+url: "https://benjaminnigjeh.github.io"
+
+# GitHub-Pages-whitelisted plugin — no gem install required. SEO/OG/schema
+# tags are hand-rolled in _includes/head-meta.html (needs to conditionally
+# hide empty contact links), so jekyll-seo-tag isn't used.
+plugins:
+  - jekyll-sitemap
+
+# Keep kramdown/GFM defaults; index.html/portfolio.html/cv.html are plain
+# HTML with front matter (no Markdown conversion needed for those pages).
+markdown: kramdown

@@ -1,0 +1,23 @@
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.viz-card {
+  padding: var(--space-3);
+  text-align: center;
+}
+
+.viz-card svg { width: 100%; height: 160px; }
+.viz-card h3 { font-size: 0.9rem; margin-top: var(--space-2); }
+
+.viz-line { fill: none; stroke: var(--accent); stroke-width: 1.6px; }
+.viz-line-alt { fill: none; stroke: var(--accent-2); stroke-width: 1.2px; opacity: 0.7; }
+.viz-dot { fill: var(--accent-3); }
+.viz-grid-bg { stroke: var(--border-glass); stroke-width: 0.5px; }
+
+.viz-animated-path {
+  stroke-dasharray: 6 4;
+  animation: dash-flow 4s linear infinite;
+}

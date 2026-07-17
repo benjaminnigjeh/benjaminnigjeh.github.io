@@ -1,0 +1,214 @@
+// Shared responsive grid used by publications, portfolio, research-areas, etc.
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+/* ---------------- Publication cards ---------------- */
+.pub-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform var(--duration-med) var(--ease-out), border-color var(--duration-med);
+}
+
+.pub-card:hover, .pub-card:focus-within {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+.pub-cover {
+  height: 140px;
+  position: relative;
+}
+
+.pub-body {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.pub-badges {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.badge-status { background: rgba(124, 156, 255, 0.18); color: var(--accent); }
+.badge-journal { background: rgba(180, 120, 255, 0.18); color: var(--accent-2); }
+.badge-year { background: rgba(79, 209, 197, 0.18); color: var(--accent-3); }
+
+.pub-source-title {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-tertiary);
+}
+
+.pub-highlights {
+  font-size: 0.9rem;
+  padding-left: 1.1rem;
+  list-style: disc;
+  color: var(--text-secondary);
+}
+
+.pub-highlights li { margin-bottom: 0.3rem; }
+
+.pub-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+.pub-actions .btn { font-size: 0.78rem; padding: 0.5rem 0.9rem; }
+
+details.tech-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+details.tech-details p {
+  font-size: 0.85rem;
+  margin-top: var(--space-2);
+}
+
+/* ---------------- Research-area hex cards ---------------- */
+.hex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.hex-card {
+  width: 190px;
+  height: 210px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1.25rem;
+  transition: transform var(--duration-med) var(--ease-out);
+}
+
+.hex-card:hover { transform: translateY(-8px) scale(1.03); }
+
+.hex-icon { font-size: 1.8rem; }
+
+.hex-card h3 { font-size: 0.95rem; margin: 0; }
+
+/* ---------------- Floating tech-stack logos ---------------- */
+.tech-float-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.tech-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100px;
+  padding: var(--space-3) var(--space-2);
+  animation: float-y 6s ease-in-out infinite;
+}
+
+.tech-chip span { font-size: 0.75rem; color: var(--text-secondary); text-align: center; }
+.tech-chip .tech-glyph { font-size: 1.5rem; }
+
+/* ---------------- Expandable AI-concept cards ---------------- */
+.concept-card {
+  padding: var(--space-4);
+  cursor: pointer;
+}
+
+.concept-card summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.02rem;
+}
+
+.concept-card summary::-webkit-details-marker { display: none; }
+
+.concept-card summary::after {
+  content: "+";
+  font-size: 1.3rem;
+  color: var(--accent);
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.concept-card[open] summary::after { transform: rotate(45deg); }
+
+.concept-card p { margin-top: var(--space-3); font-size: 0.92rem; }
+
+/* ---------------- AI Portfolio project cards ---------------- */
+.project-card {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: transform var(--duration-med) var(--ease-out), border-color var(--duration-med);
+}
+
+.project-card:hover, .project-card:focus-within {
+  transform: translateY(-6px);
+  border-color: var(--accent-2);
+}
+
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.project-tagline { font-size: 0.88rem; color: var(--text-secondary); }
+
+.project-role {
+  font-size: 0.82rem;
+  background: var(--bg-glass);
+  border-left: 2px solid var(--accent-3);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text-secondary);
+}
+
+.project-meta { font-size: 0.78rem; color: var(--text-tertiary); }
+
+/* ---------------- GitHub activity cards ---------------- */
+.repo-card {
+  padding: var(--space-3) var(--space-4);
+}
+
+.repo-card h3 { font-size: 0.95rem; margin-bottom: 0.3rem; }
+.repo-card p { font-size: 0.82rem; }
+
+.repo-meta {
+  display: flex;
+  gap: var(--space-3);
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+}

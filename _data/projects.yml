@@ -1,0 +1,186 @@
+# AI Research Portfolio entries. ProteoAgent, IDNet, and ProteoFormer have
+# specific, sourced descriptions (from the author's CV). PTMNet, TruncNet,
+# MassFlowNet, and ProteoHarvest are named only as pipeline-stage components
+# in the author's own ProteoAgent architecture spec — their entries are
+# scoped to that honest framing (role inferred from pipeline position and
+# domain naming), with no invented metrics/links/papers.
+#
+# github/paper: leave "" to hide that button on the card. Fill in once real
+# URLs exist — no code change needed.
+
+- id: proteoagent
+  name: ProteoAgent
+  tagline: AI-native multi-agent server for automated proteoform analysis
+  status: Alpha Release
+  org: ProteoBio, Inc.
+  problem: >-
+    Proteoform-level mass spectrometry analysis spans signal processing,
+    identification, PTM/truncation characterization, and quantification —
+    normally stitched together by hand across many disconnected tools.
+    ProteoAgent orchestrates this as one autonomous, agentic system.
+  pipeline_role: >-
+    Supervisor agent orchestrating the full expert-agent pipeline below —
+    signal processing → proteoform building → identification → PTM/truncation
+    characterization → quantification → automated reporting.
+  description: >-
+    A multi-agent system integrating machine learning, bioinformatics, large
+    language models, and classical mass spectrometry algorithms to automate
+    proteomics and proteoform analysis end to end. Architecture includes
+    supervisor orchestration, expert AI agents, workflow planning, persistent
+    memory, automated reporting, cloud deployment, and an interactive UI.
+    The alpha release supports automated mzML quality control, protein
+    identification, quantitative analysis, integrated reporting, and
+    multi-agent scientific reasoning.
+  future_work: >-
+    Expanding expert-agent coverage, broadening supported instrument/
+    acquisition types, and moving from alpha to a production release.
+  tags: [Multi-Agent Systems, LLMs, Agentic AI, Mass Spectrometry, Proteoforms, Cloud Deployment]
+  github: ""
+  paper: ""
+
+- id: idnet
+  name: IDNet
+  tagline: Deep-learning MS/MS spectrum identification via contrastive learning
+  status: Research & Development
+  org: Northwestern University, Proteomics Center of Excellence
+  problem: >-
+    Confident peptide/proteoform spectrum identification at scale needs
+    representations that generalize better than classical scoring functions
+    alone, especially for top-down proteomics.
+  pipeline_role: >-
+    Identification stage of the ProteoAgent expert-agent pipeline —
+    consumes proteoform candidates from the Proteoform Builder and produces
+    scored identifications for downstream PTM/truncation characterization.
+  description: >-
+    A deep-learning framework for MS/MS spectrum identification using
+    contrastive learning, embedding representations, and protein language
+    models. Developed alongside Graph-Based Proteoform Inference (GPI)
+    algorithms that integrate evidence across consecutive MS1 scans and
+    MS/MS spectra to improve proteoform reconstruction and assignment
+    confidence.
+  future_work: >-
+    Extending the contrastive embedding approach with additional protein
+    language model backbones and broader benchmark coverage.
+  tags: [Contrastive Learning, Protein Language Models, Embeddings, Graph-Based Inference, Top-Down Proteomics]
+  github: ""
+  paper: ""
+
+- id: proteoformer
+  name: ProteoFormer
+  tagline: Elastic containerized pipeline framework for reproducible proteomics workflows
+  status: In Development
+  org: ProteoBio, Inc.
+  problem: >-
+    Combining deep learning, probabilistic inference, graph algorithms, and
+    established bioinformatics toolkits into one reproducible workflow is an
+    infrastructure problem as much as a modeling one.
+  pipeline_role: >-
+    Infrastructure layer underlying the ProteoAgent expert-agent pipeline —
+    containerized, elastic execution for every stage from signal processing
+    through reporting.
+  description: >-
+    An elastic containerized computational framework integrating deep
+    learning models, probabilistic inference, graph-based algorithms, and
+    established bioinformatics toolkits into reproducible scientific
+    workflows for computational proteomics.
+  future_work: >-
+    Broadening toolkit integrations and elastic-scaling support as
+    ProteoAgent's expert-agent workload grows.
+  tags: [Containerization, Probabilistic Inference, Graph Algorithms, Scientific Workflows, MLOps]
+  github: ""
+  paper: ""
+
+- id: proteoharvest
+  name: ProteoHarvest
+  tagline: Automated knowledge- and dataset-harvesting infrastructure
+  status: Active Infrastructure
+  org: ProteoBio, Inc.
+  problem: >-
+    Training reliable proteomics ML models requires large, well-labeled
+    datasets drawn from public repositories and the scientific literature —
+    normally a slow, manual curation bottleneck.
+  pipeline_role: >-
+    Upstream of the ProteoAgent expert-agent pipeline — supplies normalized,
+    annotated training data used to train and evaluate IDNet, PTMNet,
+    TruncNet, and MassFlowNet.
+  description: >-
+    Automated infrastructure for collecting, normalizing, and annotating
+    large-scale proteomics datasets and scientific literature to generate
+    high-quality training datasets for machine learning.
+  future_work: >-
+    Expanding source coverage and annotation quality as new expert-agent
+    models come online.
+  tags: [Data Engineering, Knowledge Harvesting, Dataset Curation, Automated Labeling]
+  github: ""
+  paper: ""
+
+- id: ptmnet
+  name: PTMNet
+  tagline: Expert agent for proteoform post-translational-modification characterization
+  status: Pipeline Component — Concept Stage
+  org: ProteoBio, Inc.
+  problem: >-
+    Accurately localizing and characterizing post-translational
+    modifications on identified proteoforms is a distinct modeling problem
+    from identification itself.
+  pipeline_role: >-
+    PTM-characterization stage of the ProteoAgent expert-agent pipeline —
+    runs on IDNet's identifications, before TruncNet.
+  description: >-
+    Named component of the ProteoAgent architecture, scoped to
+    post-translational-modification characterization within the broader
+    proteoform-characterization workflow. Design and implementation details
+    have not yet been published — this card will be expanded with an
+    architecture summary once that work is ready to share publicly.
+  future_work: >-
+    Full model design, training, and evaluation are in progress.
+  tags: [Post-Translational Modifications, Proteoform Characterization]
+  github: ""
+  paper: ""
+
+- id: truncnet
+  name: TruncNet
+  tagline: Expert agent for proteoform truncation and sequence-variant characterization
+  status: Pipeline Component — Concept Stage
+  org: ProteoBio, Inc.
+  problem: >-
+    Top-down proteoforms frequently carry N-/C-terminal truncations and
+    sequence variants that must be distinguished from modification-driven
+    mass shifts.
+  pipeline_role: >-
+    Truncation/sequence-variant stage of the ProteoAgent expert-agent
+    pipeline — runs after PTMNet, before MassFlowNet.
+  description: >-
+    Named component of the ProteoAgent architecture, scoped to truncation
+    and sequence-variant characterization within the broader
+    proteoform-characterization workflow. Design and implementation details
+    have not yet been published — this card will be expanded with an
+    architecture summary once that work is ready to share publicly.
+  future_work: >-
+    Full model design, training, and evaluation are in progress.
+  tags: [Sequence Variants, Truncation Analysis, Proteoform Characterization]
+  github: ""
+  paper: ""
+
+- id: massflownet
+  name: MassFlowNet
+  tagline: Expert agent for quantitative proteoform mass-flow analysis
+  status: Pipeline Component — Concept Stage
+  org: ProteoBio, Inc.
+  problem: >-
+    Turning characterized proteoforms into reliable quantitative signal
+    (abundance / mass-flow) across samples requires dedicated quantitative
+    modeling, distinct from identification and characterization.
+  pipeline_role: >-
+    Quantification stage of the ProteoAgent expert-agent pipeline — runs
+    after TruncNet, feeding the automated Report Generator.
+  description: >-
+    Named component of the ProteoAgent architecture, scoped to quantitative
+    proteoform mass-flow analysis. Design and implementation details have
+    not yet been published — this card will be expanded with an
+    architecture summary once that work is ready to share publicly.
+  future_work: >-
+    Full model design, training, and evaluation are in progress.
+  tags: [Quantitative Proteomics, Mass-Flow Analysis]
+  github: ""
+  paper: ""

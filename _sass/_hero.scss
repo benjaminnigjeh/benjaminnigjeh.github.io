@@ -1,0 +1,116 @@
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--space-6);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  opacity: 0.65;
+}
+
+.hero-glow {
+  position: absolute;
+  inset: -20% -10%;
+  z-index: -2;
+  background:
+    radial-gradient(38% 45% at 20% 25%, rgba(124, 156, 255, 0.28), transparent 70%),
+    radial-gradient(35% 40% at 82% 20%, rgba(180, 120, 255, 0.22), transparent 70%),
+    radial-gradient(45% 50% at 60% 85%, rgba(79, 209, 197, 0.16), transparent 70%);
+  filter: blur(10px);
+  animation: pulse-glow 10s ease-in-out infinite;
+}
+
+.hero-protein {
+  position: absolute;
+  right: -6%;
+  top: 8%;
+  width: min(46vw, 620px);
+  z-index: -1;
+  opacity: 0.55;
+  animation: float-y 12s ease-in-out infinite;
+}
+
+.hero-protein path { animation: dash-flow 6s linear infinite; }
+
+.hero-content {
+  position: relative;
+  max-width: 760px;
+}
+
+.hero-title {
+  font-size: clamp(2.6rem, 1.9rem + 4vw, 5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent) 70%, var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: var(--space-3);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin-bottom: var(--space-4);
+}
+
+.hero-rotator {
+  position: relative;
+  display: inline-block;
+  height: 1.6em;
+  min-width: 300px;
+  vertical-align: bottom;
+  font-weight: 700;
+  color: var(--accent-3);
+  margin-bottom: var(--space-5);
+  font-size: 1.15rem;
+}
+
+.hero-rotator span {
+  position: absolute;
+  inset: 0;
+  white-space: nowrap;
+  animation: keyword-crossfade 18s var(--ease-out) infinite;
+  animation-delay: calc(var(--i, 0) * -2s);
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.hero-scroll-cue {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero-scroll-cue::after {
+  content: "";
+  width: 1px;
+  height: 34px;
+  background: linear-gradient(var(--accent), transparent);
+  animation: float-y 2.4s ease-in-out infinite;
+}
+
+@media (max-width: 720px) {
+  .hero { min-height: 82vh; }
+  .hero-protein { display: none; }
+}

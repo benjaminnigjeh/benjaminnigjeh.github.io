@@ -1,0 +1,107 @@
+---
+layout: default
+title: AI Research Portfolio — Benjamin Nigjeh
+description: >-
+  ProteoAgent, IDNet, ProteoFormer, and the AI-native expert-agent pipeline
+  behind Benjamin Nigjeh's computational proteomics work.
+---
+
+<section id="portfolio-intro" data-reveal="fade">
+  <div class="section-head">
+    <p class="eyebrow">AI Research Portfolio</p>
+    <h2>Building an AI-native proteomics platform</h2>
+    <p>
+      ProteoAgent is a multi-agent system that automates proteoform-level mass
+      spectrometry analysis end to end. The architecture below shows how a
+      supervisor agent orchestrates the expert-agent pipeline; the analytical
+      pipeline underneath shows the underlying mass-spec-to-report workflow it
+      runs. Project cards for each named component follow.
+    </p>
+  </div>
+</section>
+
+<section id="proteoagent-architecture" data-reveal="fade">
+  <div class="section-head">
+    <p class="eyebrow">ProteoAgent Visualization</p>
+    <h2>Multi-agent architecture</h2>
+  </div>
+
+  <div class="arch-diagram glass">
+    <div class="arch-node is-supervisor">Supervisor Agent</div>
+    <div class="arch-connector"></div>
+    <div class="arch-node is-expert">Expert Agents</div>
+    <div class="arch-connector"></div>
+    <div class="arch-node is-expert">Signal Processing</div>
+    <div class="arch-connector"></div>
+    <div class="arch-node is-expert">Proteoform Builder</div>
+    <div class="arch-connector"></div>
+    <div class="arch-node is-expert">IDNet</div>
+    <div class="arch-connector"></div>
+    <div class="arch-node is-expert">PTMNet</div>
+    <div class="arch-connector"></div>
+    <div class="arch-node is-expert">TruncNet</div>
+    <div class="arch-connector"></div>
+    <div class="arch-node is-expert">MassFlowNet</div>
+    <div class="arch-connector"></div>
+    <div class="arch-node is-output">Report Generator</div>
+  </div>
+</section>
+
+<section id="analytical-pipeline" data-reveal="fade">
+  <div class="section-head">
+    <p class="eyebrow">Interactive Pipeline</p>
+    <h2>RAW file to final report</h2>
+  </div>
+
+  <div class="pipeline-track glass">
+    {%- assign stages = "RAW,QC,MS1,Deconvolution,Proteoforms,MS2,Identification,Characterization,Quantification,AI Models,Final Report" | split: "," -%}
+    {%- for stage in stages %}
+    <div class="pipeline-stage" style="--i:{{ forloop.index0 }}">
+      <div class="pipeline-dot" style="--i:{{ forloop.index0 }}">{{ forloop.index }}</div>
+      <span class="pipeline-label">{{ stage }}</span>
+    </div>
+    {%- unless forloop.last %}<div class="pipeline-connector" style="--i:{{ forloop.index0 }}"></div>{%- endunless %}
+    {%- endfor %}
+  </div>
+</section>
+
+<section id="ai-projects" data-reveal="fade">
+  <div class="section-head">
+    <p class="eyebrow">Projects</p>
+    <h2>Expert agents &amp; platform components</h2>
+  </div>
+
+  <div class="card-grid">
+    {%- for p in site.data.projects %}
+    <article class="project-card glass" data-reveal="slide" aria-labelledby="{{ p.id }}-title">
+      <div class="project-head">
+        <h3 id="{{ p.id }}-title">{{ p.name }}</h3>
+        <span class="badge badge-status">{{ p.status }}</span>
+      </div>
+      <p class="project-tagline">{{ p.tagline }}</p>
+      <p class="project-meta">{{ p.org }}</p>
+
+      <details class="tech-details">
+        <summary>Architecture &amp; details</summary>
+        <p><strong>Problem:</strong> {{ p.problem }}</p>
+        <p class="project-role"><strong>Pipeline role:</strong> {{ p.pipeline_role }}</p>
+        <p>{{ p.description }}</p>
+        <p><strong>Future work:</strong> {{ p.future_work }}</p>
+      </details>
+
+      <div class="tag-list" aria-label="Technologies">
+        {%- for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+      </div>
+
+      <div class="pub-actions">
+        {%- if p.github != "" %}
+        <a class="btn" href="{{ p.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+        {%- endif %}
+        {%- if p.paper != "" %}
+        <a class="btn" href="{{ p.paper }}" target="_blank" rel="noopener noreferrer">Paper</a>
+        {%- endif %}
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>

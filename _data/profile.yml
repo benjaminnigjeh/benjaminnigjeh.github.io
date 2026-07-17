@@ -1,0 +1,48 @@
+# Single source of truth for contact links and stat-dashboard numbers.
+# Any field left empty ("") is hidden by the template that reads it —
+# nothing here is guessed. Fill in the TODOs below at any time; templates
+# don't need to change, just these values.
+
+name: Benjamin Nouri Nigjeh
+role: Chief Machine Learning Scientist, ProteoBio · AI/ML Lead Scientist, Northwestern University
+email: benjamin.nigjeh@gmail.com
+
+# Confirmed. Repo owner of benjaminnigjeh.github.io.
+github: https://github.com/benjaminnigjeh
+
+# TODO: add real profile URLs — the site hides these buttons until filled in.
+linkedin: ""
+scholar: ""
+orcid: ""
+
+cv_url: /cv.html
+
+# --- Statistics Dashboard -------------------------------------------------
+# Values with a note are directly supported by the CV/repo. Values marked
+# "TODO: confirm" are left at 0 (hidden/omitted by the template) until a
+# real number is supplied — no invented metrics ship on the live site.
+stats:
+  - label: Years Experience
+    value: 20
+    suffix: "+"
+  - label: Research Manuscripts
+    value: 3
+    suffix: ""
+  - label: Programming Languages
+    value: 9
+    suffix: ""
+  - label: FDA-Approved Therapeutics Supported
+    value: 4
+    suffix: ""
+  - label: Publications          # TODO: confirm exact peer-reviewed count
+    value: 0
+    suffix: ""
+  - label: AI Models Developed   # TODO: confirm exact count
+    value: 0
+    suffix: ""
+  - label: GitHub Projects       # TODO: confirm exact count
+    value: 0
+    suffix: ""
+  - label: ML Models             # TODO: confirm exact count
+    value: 0
+    suffix: ""

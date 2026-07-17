@@ -1,0 +1,23 @@
+<section id="tech-stack" data-reveal="fade">
+  <div class="section-head">
+    <p class="eyebrow">Technology Stack</p>
+    <h2>Tools of the trade</h2>
+  </div>
+
+  <div class="filter-bar" data-filter-group=".tech-chip" role="group" aria-label="Filter technologies by category">
+    <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+    <button type="button" class="filter-btn" data-filter="ai-ml">AI / ML</button>
+    <button type="button" class="filter-btn" data-filter="infra">Infrastructure</button>
+    <button type="button" class="filter-btn" data-filter="viz">Visualization</button>
+    <button type="button" class="filter-btn" data-filter="languages">Languages</button>
+  </div>
+
+  <div class="tech-float-grid">
+    {%- for t in site.data.tech_stack %}
+    <div class="tech-chip glass" data-tags="{{ t.category }}" style="animation-delay: {{ forloop.index0 | times: 220 }}ms">
+      <span class="tech-glyph" aria-hidden="true">{{ t.glyph }}</span>
+      <span>{{ t.name }}</span>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

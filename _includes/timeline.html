@@ -1,0 +1,34 @@
+<section id="timeline" data-reveal="fade">
+  <div class="section-head">
+    <p class="eyebrow">Career Timeline</p>
+    <h2>Experience</h2>
+  </div>
+
+  <div class="filter-bar timeline-filters" data-filter-group=".timeline-entry" role="group" aria-label="Filter timeline by category">
+    <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+    <button type="button" class="filter-btn" data-filter="proteobio">ProteoBio</button>
+    <button type="button" class="filter-btn" data-filter="northwestern">Northwestern</button>
+    <button type="button" class="filter-btn" data-filter="pharmaceutical">Pharmaceutical</button>
+    <button type="button" class="filter-btn" data-filter="academic-research">Academic Research</button>
+    <button type="button" class="filter-btn" data-filter="education">Education</button>
+  </div>
+
+  <div class="timeline">
+    {%- for entry in site.data.timeline %}
+    <details class="timeline-entry glass" data-tags="{{ entry.category }}" data-category="{{ entry.category }}" data-reveal="slide">
+      <summary>
+        <span class="badge badge-status">{{ entry.category_label }}</span>
+        <strong>{{ entry.title }}</strong>
+        <span class="timeline-dates">{{ entry.start }} – {{ entry.end }}</span>
+      </summary>
+      <p class="timeline-org">{{ entry.org }}</p>
+      <p class="timeline-summary">{{ entry.summary }}</p>
+      {%- if entry.highlights and entry.highlights.size > 0 %}
+      <ul class="timeline-highlights">
+        {%- for h in entry.highlights %}<li>{{ h }}</li>{% endfor %}
+      </ul>
+      {%- endif %}
+    </details>
+    {%- endfor %}
+  </div>
+</section>

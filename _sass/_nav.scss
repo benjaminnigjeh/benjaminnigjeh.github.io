@@ -1,0 +1,74 @@
+.site-nav {
+  position: sticky;
+  top: var(--space-3);
+  z-index: 1000;
+  max-width: calc(var(--max-width) - 2rem);
+  margin: var(--space-3) auto;
+  padding: 0.65rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.brand-dot { color: var(--accent); }
+
+.primary-nav {
+  display: flex;
+  gap: var(--space-4);
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+}
+
+.primary-nav a {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+.primary-nav a:hover, .primary-nav a:focus-visible {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+#theme-toggle .icon-moon { display: none; }
+// Dark is the default state (see _tokens.scss) so the sun icon (meaning
+// "switch to light") shows by default; only an explicit data-theme="light"
+// flips it to the moon icon ("switch to dark").
+:root[data-theme="light"] #theme-toggle .icon-sun { display: none; }
+:root[data-theme="light"] #theme-toggle .icon-moon { display: block; }
+
+// Below 860px the nav becomes a horizontally-scrollable strip rather than
+// disappearing entirely — Ctrl+K also reaches every section/page, but a
+// touch-swipeable nav keeps a no-JS path to navigation on mobile.
+@media (max-width: 860px) {
+  .site-nav { justify-content: flex-start; }
+
+  .primary-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    mask-image: linear-gradient(to right, transparent, black 12px, black 90%, transparent);
+  }
+
+  .primary-nav::-webkit-scrollbar { display: none; }
+
+  .primary-nav a { flex: 0 0 auto; }
+}

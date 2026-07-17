@@ -1,0 +1,71 @@
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+@keyframes rotate-slow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes dash-flow {
+  to { stroke-dashoffset: -240; }
+}
+
+@keyframes keyword-crossfade {
+  0%, 8% { opacity: 1; transform: translateY(0); }
+  11%, 100% { opacity: 0; transform: translateY(-0.4em); }
+}
+
+@keyframes count-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+// Staggered per-item "lit" pulse — same negative-animation-delay trick as
+// the hero keyword rotator. Drives the horizontal analytical pipeline's
+// sequential stage-lighting with zero JavaScript.
+@keyframes stage-light {
+  0%, 4% {
+    border-color: var(--accent-3);
+    background: var(--accent-gradient);
+    color: #06070b;
+    box-shadow: 0 0 22px rgba(79, 209, 197, 0.5);
+  }
+  9%, 100% {
+    border-color: var(--border-glass);
+    background: var(--bg-glass);
+    color: var(--text-tertiary);
+    box-shadow: none;
+  }
+}
+
+@keyframes connector-light {
+  0%, 4% { background: var(--accent-3); }
+  9%, 100% { background: var(--border-glass); }
+}
+
+// Konami-code easter egg (see assets/js/main.js).
+@keyframes easter-egg-spin {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+body.easter-egg-active {
+  animation: easter-egg-spin 3s linear;
+}
+
+// Global reduced-motion guard — every custom animation/transition above and
+// throughout the other partials collapses to essentially instant.
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

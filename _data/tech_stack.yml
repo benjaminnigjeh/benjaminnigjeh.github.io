@@ -1,0 +1,17 @@
+- { name: Python, glyph: Py, category: languages }
+- { name: PyTorch, glyph: PT, category: ai-ml }
+- { name: TensorFlow, glyph: TF, category: ai-ml }
+- { name: FastAPI, glyph: FA, category: infra }
+- { name: Docker, glyph: Do, category: infra }
+- { name: Kubernetes, glyph: K8, category: infra }
+- { name: Linux, glyph: Lx, category: infra }
+- { name: GitHub, glyph: Gh, category: infra }
+- { name: AWS, glyph: AW, category: infra }
+- { name: Azure, glyph: Az, category: infra }
+- { name: OpenAI, glyph: AI, category: ai-ml }
+- { name: Anthropic, glyph: An, category: ai-ml }
+- { name: Ollama, glyph: Ol, category: ai-ml }
+- { name: Hugging Face, glyph: HF, category: ai-ml }
+- { name: Three.js, glyph: 3J, category: viz }
+- { name: Plotly, glyph: Pl, category: viz }
+- { name: D3.js, glyph: D3, category: viz }

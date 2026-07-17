@@ -1,0 +1,113 @@
+/* ---------------- ProteoAgent architecture diagram ---------------- */
+.arch-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: var(--space-5) var(--space-3);
+}
+
+.arch-node {
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-align: center;
+  min-width: 220px;
+  position: relative;
+  z-index: 1;
+}
+
+.arch-node.is-supervisor { background: var(--accent-gradient); color: #06070b; }
+.arch-node.is-expert { background: var(--bg-glass); border: 1px solid var(--accent-2); }
+.arch-node.is-output { background: var(--bg-glass); border: 1px solid var(--accent-3); }
+
+.arch-connector {
+  width: 2px;
+  height: 34px;
+  background: linear-gradient(var(--accent), var(--accent-2));
+  position: relative;
+  overflow: hidden;
+}
+
+.arch-connector::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(var(--text-primary), transparent);
+  animation: dash-flow-y 1.6s linear infinite;
+}
+
+@keyframes dash-flow-y {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100%); }
+}
+
+.arch-experts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+  margin: var(--space-2) 0;
+}
+
+/* ---------------- Horizontal analytical pipeline ---------------- */
+.pipeline-track {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  gap: 0;
+  padding: var(--space-4) var(--space-2);
+  scrollbar-width: thin;
+}
+
+.pipeline-stage {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 118px;
+  text-align: center;
+}
+
+.pipeline-dot {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--border-glass);
+  background: var(--bg-glass);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  animation: stage-light 24s linear infinite;
+  animation-delay: calc(var(--i, 0) * -2.18s);
+}
+
+// Once .pipeline-track is in view, .is-playing (added by scroll-reveal-driven
+// JS) starts the loop; before that the animation is paused on the first frame.
+.pipeline-stage .pipeline-dot { animation-play-state: paused; }
+.pipeline-track.is-playing .pipeline-stage .pipeline-dot { animation-play-state: running; }
+
+.pipeline-stage span.pipeline-label {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.pipeline-connector {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 2px;
+  background: var(--border-glass);
+  animation: connector-light 24s linear infinite;
+  animation-delay: calc(var(--i, 0) * -2.18s + 1.09s);
+  animation-play-state: paused;
+}
+
+.pipeline-track.is-playing .pipeline-connector { animation-play-state: running; }
+
+@media (max-width: 720px) {
+  .arch-node { min-width: 180px; font-size: 0.82rem; }
+}

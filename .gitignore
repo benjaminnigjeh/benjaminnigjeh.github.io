@@ -9,3 +9,13 @@ Analytical Chemistry.pdf
 # Remove these two lines (and re-add the files) once you've explicitly approved
 # public distribution — see assets/publications/README.md.
 assets/publications/*.pdf
+
+# Editor/OS cruft
+.DS_Store
+Thumbs.db
+*.backup
+
+# Jekyll build output (no local Ruby toolchain is used in this workflow, but
+# ignore it defensively in case someone runs a local build later).
+_site/
+.jekyll-cache/

@@ -1,0 +1,17 @@
+<section id="stats" data-reveal="fade">
+  <div class="section-head">
+    <p class="eyebrow">By the Numbers</p>
+    <h2>Statistics Dashboard</h2>
+  </div>
+
+  <div class="stats-grid">
+    {%- for s in site.data.profile.stats %}
+      {%- if s.value > 0 %}
+      <div class="stat-card glass" data-reveal="scale">
+        <div class="stat-value" data-counter="{{ s.value }}" data-suffix="{{ s.suffix }}">0{{ s.suffix }}</div>
+        <div class="stat-label">{{ s.label }}</div>
+      </div>
+      {%- endif %}
+    {%- endfor %}
+  </div>
+</section>

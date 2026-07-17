@@ -1,0 +1,123 @@
+# Career timeline — sourced verbatim (condensed) from the author's own CV.
+# Rendered by _includes/timeline.html as expand-on-click entries.
+# category drives the color-coded label/filter: proteobio | northwestern |
+# pharmaceutical | academic-research | education
+
+- id: proteobio
+  category: proteobio
+  category_label: ProteoBio
+  org: ProteoBio, Inc.
+  title: Chief Machine Learning Scientist
+  start: "December 2025"
+  end: "Present"
+  summary: >-
+    Lead scientific strategy and technical development of AI/ML technologies
+    for ProteoBio's AI-native computational proteomics platform. Architect
+    and principal developer of ProteoAgent Server, a multi-agent system
+    unifying machine learning, bioinformatics, LLMs, and classical mass
+    spectrometry algorithms to automate proteomics and proteoform analysis.
+  highlights:
+    - Architected the full ProteoAgent Server platform — supervisor orchestration, expert AI agents, workflow planning, persistent memory, reporting, cloud deployment, and interactive UI.
+    - Designed ML frameworks spanning the full computational proteomics workflow — knowledge harvesting, automated dataset generation/labeling, MS signal processing, isotope deconvolution, proteoform feature discovery, protein identification, proteoform characterization, quantitative proteomics.
+    - Developed the ProteoFormer Pipeline, an elastic containerized framework integrating deep learning, probabilistic inference, graph-based algorithms, and established bioinformatics toolkits into reproducible scientific workflows.
+    - Built automated knowledge-harvesting infrastructure for collecting, normalizing, and annotating large-scale proteomics datasets and literature to generate ML training data.
+    - Led development of the alpha release of ProteoAgent Server — automated mzML QC, protein identification, quantitative analysis, integrated reporting, multi-agent scientific reasoning.
+
+- id: northwestern
+  category: northwestern
+  category_label: Northwestern
+  org: Northwestern University, Proteomics Center of Excellence
+  title: AI/ML Lead Scientist
+  start: "March 2024"
+  end: "Present"
+  summary: >-
+    Lead the design and application of AI, machine learning, and
+    computational methods for top-down proteomics, proteoform informatics,
+    and large-scale mass spectrometry data analysis.
+  highlights:
+    - Established and led the Artificial Intelligence and Machine Learning Study Group — benchmarking classical ML, deep learning, protein language models, graph-based learning, foundation models, and LLMs for proteomics.
+    - Designed computational algorithms for proteoform discovery, integrating consecutive MS1 scans, isotope envelopes, precursor ions, chromatographic evidence, and MS/MS identifications.
+    - Developed IDNet, a deep-learning framework for MS/MS spectrum identification using contrastive learning, embedding representations, and protein language models.
+    - Designed Graph-Based Proteoform Inference (GPI) algorithms integrating evidence across consecutive MS1 scans and MS/MS spectra to improve proteoform reconstruction and assignment confidence.
+    - Led computational analysis of large-scale top-down proteomics studies in neurodegeneration, plasma proteomics, and clinical biomarker discovery.
+
+- id: pharma
+  category: pharmaceutical
+  category_label: Pharmaceutical Experience
+  org: ActivX Biosciences (Kyorin Pharmaceuticals) · Vertex Pharmaceuticals · Exelixis, Inc.
+  title: Senior Scientist — Computational Proteomics, Bioinformatics & AI
+  start: "2018"
+  end: "2024"
+  summary: >-
+    Led data generation across small molecules, ADCs, gene editing, and LNP
+    mRNA modalities, and development of computational proteomics,
+    bioinformatics, AI, and ML solutions supporting drug discovery,
+    translational medicine, biologics characterization, and bioanalysis.
+  highlights:
+    - Developed computational algorithms and automated bioinformatics workflows for large-scale proteomics, chemoproteomics, structural biology, and therapeutic protein characterization.
+    - Applied machine learning to automate biological data analysis, feature extraction, pattern recognition, biomarker discovery, and candidate prioritization.
+    - Evaluated, optimized, and retrained deep-learning architectures, including Prosit-derived spectrum prediction models.
+    - Designed MS workflows for PTMs, sequence variants, protein–ligand interactions, covalent binding, and target engagement.
+    - Supported interdisciplinary programs contributing to multiple FDA-approved therapeutics, including TRIKAFTA®, KALYDECO®, ORKAMBI®, SYMDEKO®, and suzetrigine (VX-548).
+
+- id: postdoc
+  category: academic-research
+  category_label: Academic Research
+  org: SUNY Buffalo & University of Washington School of Medicine
+  title: Postdoctoral Research Scientist — Computational Proteomics & Quantitative Mass Spectrometry
+  start: "2011"
+  end: "2018"
+  summary: >-
+    Interdisciplinary research spanning proteomics, bioinformatics,
+    computational biology, pharmacokinetics, and machine learning; developed
+    quantitative MS platforms and predictive models for biomarker discovery.
+  highlights:
+    - Applied ML to high-dimensional DIA-MS proteomics datasets for biomarker discovery and disease classification.
+    - Built predictive ML models for early detection of pancreatic cancer using plasma proteomics and glycoproteomics from clinical cohorts.
+    - Developed quantitative DIA, SRM, PRM, and label-free LC–MS workflows; quantified 3,500+ plasma proteins/glycoproteins across large clinical cohorts.
+    - Identified circulating galectin-3 binding protein as a promising early-stage pancreatic cancer biomarker.
+    - Published in Analytical Chemistry, Journal of Proteome Research, Proteomics: Clinical Applications, and related journals.
+
+- id: education-cs
+  category: education
+  category_label: Education
+  org: MIT OpenCourseWare · O'Reilly Media · Manning Publications · MIT Press
+  title: Professional Development — Computer Science, AI & Software Engineering
+  start: "2018"
+  end: "Present"
+  summary: >-
+    Extensive self-directed postgraduate study in CS, AI, ML, deep learning,
+    algorithms, and scientific computing (non-degree), extended into AI
+    engineering, LLMs, agentic systems, RAG, distributed systems, and MLOps.
+  highlights:
+    - "Core CS foundations: algorithms, data structures, linear algebra, probability, statistics, numerical optimization, scientific computing."
+    - "Applied AI depth: LLMs, agentic AI systems, multi-agent architectures, retrieval-augmented generation, knowledge graphs."
+    - "Infrastructure depth: distributed systems, cloud computing, data engineering, MLOps, FastAPI, Docker, Kubernetes, REST APIs, HPC."
+
+- id: education-phd
+  category: education
+  category_label: Education
+  org: University of Groningen
+  title: Ph.D., Analytical Biochemistry
+  start: "2006"
+  end: "2011"
+  summary: >-
+    Dissertation on advanced LC–MS methodologies for quantitative proteomics
+    and pharmaceutical metabolism, including hybrid electrochemistry–mass
+    spectrometry approaches for oxidative drug metabolism and protein
+    adduct formation. Research supported by AstraZeneca.
+  highlights: []
+
+- id: education-msc
+  category: education
+  category_label: Education
+  org: Sharif University of Technology
+  title: B.Sc. & M.Sc., Materials Science and Engineering
+  start: "2000"
+  end: "2006"
+  summary: >-
+    Engineering software and numerical modeling projects using Pascal,
+    Delphi, and MATLAB — mathematical modeling, optimization, simulation,
+    and GUI development — the computational foundation for later work in
+    ML, AI, and scientific software engineering.
+  highlights: []

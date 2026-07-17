@@ -1,0 +1,29 @@
+{%- assign areas = "Artificial Intelligence,Machine Learning,Mass Spectrometry,Bioinformatics,Proteomics,Cloud Computing,Distributed Computing,Software Engineering,Large Language Models,Scientific Computing" | split: "," -%}
+<section id="research-areas" data-reveal="fade">
+  <div class="section-head">
+    <p class="eyebrow">Research Areas</p>
+    <h2>Core disciplines</h2>
+  </div>
+
+  <div class="hex-grid">
+    {%- for area in areas %}
+    <div class="hex-card glass" data-reveal="scale" style="transition-delay: {{ forloop.index0 | times: 60 }}ms">
+      <svg class="hex-icon-svg" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="var(--accent)" stroke-width="1.4" aria-hidden="true">
+        {%- assign glyph = forloop.index0 | modulo: 4 -%}
+        {%- if glyph == 0 %}
+          <circle cx="15" cy="15" r="4"/><circle cx="6" cy="8" r="2"/><circle cx="24" cy="8" r="2"/><circle cx="6" cy="22" r="2"/><circle cx="24" cy="22" r="2"/>
+          <line x1="15" y1="15" x2="6" y2="8"/><line x1="15" y1="15" x2="24" y2="8"/><line x1="15" y1="15" x2="6" y2="22"/><line x1="15" y1="15" x2="24" y2="22"/>
+        {%- elsif glyph == 1 %}
+          <ellipse cx="15" cy="15" rx="12" ry="5"/><ellipse cx="15" cy="15" rx="5" ry="12"/><circle cx="15" cy="15" r="2" fill="var(--accent)"/>
+        {%- elsif glyph == 2 %}
+          <path d="M3 15h5l3-9 4 18 4-13 3 4h5"/>
+        {%- else %}
+          <rect x="5" y="5" width="8" height="8" rx="1.5"/><rect x="17" y="5" width="8" height="8" rx="1.5"/>
+          <rect x="5" y="17" width="8" height="8" rx="1.5"/><rect x="17" y="17" width="8" height="8" rx="1.5"/>
+        {%- endif %}
+      </svg>
+      <h3>{{ area }}</h3>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
