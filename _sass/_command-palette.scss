@@ -19,7 +19,7 @@
 
 .command-palette-panel {
   position: relative;
-  width: min(560px, 90vw);
+  width: unquote("min(560px, 90vw)");
   padding: var(--space-3);
   max-height: 60vh;
   display: flex;
