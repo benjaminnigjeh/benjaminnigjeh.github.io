@@ -1,5 +1,20 @@
 <header class="site-nav glass" data-reveal="fade">
-  <a class="brand" href="{{ '/' | relative_url }}">BN<span class="brand-dot">.</span></a>
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="Home">
+    <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#brand-grad)" opacity="0.16"/>
+      <rect x="1" y="1" width="38" height="38" rx="11" stroke="url(#brand-grad)" stroke-width="1.4"/>
+      <path d="M13 27 L27 13 M13 27 L27 27" stroke="url(#brand-grad)" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="13" cy="27" r="3" fill="var(--accent-3)"/>
+      <circle cx="27" cy="13" r="3" fill="var(--accent-2)"/>
+      <circle cx="27" cy="27" r="2.4" fill="var(--accent)"/>
+      <defs>
+        <linearGradient id="brand-grad" x1="0" y1="0" x2="40" y2="40">
+          <stop offset="0%" stop-color="var(--accent)"/>
+          <stop offset="100%" stop-color="var(--accent-2)"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </a>
 
   <nav class="primary-nav" aria-label="Primary">
     <a href="{{ '/#research-ecosystem' | relative_url }}">Ecosystem</a>
