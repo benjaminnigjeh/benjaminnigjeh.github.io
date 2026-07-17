@@ -19,13 +19,15 @@
 }
 
 .brand-mark {
-  width: 34px;
-  height: 34px;
-  transition: transform 0.25s var(--ease-out);
+  width: 22px;
+  height: 22px;
+  color: var(--text-primary);
+  transition: color 0.2s var(--ease-out), transform 0.25s var(--ease-out);
 }
 
 .brand:hover .brand-mark,
 .brand:focus-visible .brand-mark {
+  color: var(--accent);
   transform: scale(1.08);
 }
 
